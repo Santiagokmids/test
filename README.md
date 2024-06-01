@@ -137,6 +137,8 @@ Si la aplicación no es capaz de identificar una cámara, seguirá buscando hast
 
 En ambas pantallas, tendrá la opción de ir de nuevo al login, esto a partir del botón **"<-"**. Por otro lado, en el momento en que se identifica una cámara, tendrá disponible la opción **"Siguiente"**, la cual al darle clic, le enviará a la pantalla para seleccionar el tipo de prueba que va a realizar.
 
+**Para tener en cuenta:** Por favor conecte la cámara por medio de un puerto **USB 3.1** para que así obtenga el mejor rendimiento posible de la misma. Si va a usar la cámara **Intel&reg; Realsense D435**, es **indispensable** que la conecte a este puerto, porque de otra forma, la cámara no será capaz de funcionar en la aplicación.  
+
 #### Formulario del paciente
 
 Ahora, se encontrará con una de las pantallas más importantes de la aplicación, que es la del formulario del paciente. Al iniciar, verá lo siguiente:
