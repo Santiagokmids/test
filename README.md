@@ -74,6 +74,7 @@ Para poder sacar el máximo provecho al software, por favor instale:
 
 #### Resolución de Problemas Comunes
 - **No se puede ejecutar la aplicación**: Verifique que el antivirus de su sistema le permita ejecutar aplicaciones de externos.
+- **Aplicación no funciona con cámara Intel&reg; Realsense D435**: Verifique la cámara se encuentre conectada a un puerto **USB 3.1**.
 
 ### Funcionamiento
 
