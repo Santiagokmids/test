@@ -22,11 +22,12 @@
    1. [Tutorial](#Tutorial)
    2. [Login](#Login)
    3. [Identificación de cámara](#Identificación-de-cámara)
-   4. [Selección del tipo de prueba](#Selección-del-tipo-de-prueba)
    5. [Formulario del paciente](#Formulario-del-paciente)
+   5. [Selección del tipo de prueba](#Selección-del-tipo-de-prueba)
    6. [Grabación](#Grabación)
-   7. [Archivo guardado](#Archivo-guardado)
-   8. [Archivo de logs](#Archivo-de-logs)
+   7. [Historial](#Historial)
+   8. [Archivo guardado](#Archivo-guardado)
+   9. [Archivo de logs](#Archivo-de-logs)
 8. [Resolución de dudas](#Resolución-de-dudas)
 9. [Actualizaciones](#Actualizaciones)
 
@@ -110,15 +111,17 @@ Esta pantalla hace alusión al último paso del tutorial. Aquí se le informa so
 
 Ahora, después de haber saltado o visto todo el tutorial, llegaremos a la pantalla de login o inicio de sesión, la cual se ve así:
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/719a4226-d470-4da9-b557-01d3cd91a540)
+![image](https://github.com/Santiagokmids/test/assets/72984873/710a7bdc-6773-4af4-9bdd-1dfcffe24b36)
 > Pantalla de login o inicio de sesión
 
 En este punto usted podrá ingresar el nombre completo y el número de identificación de la persona que va a realizar la medición, esto para que en cada medición se tenga presente quién fue su respectivo medidor. El número de identificación no debe contener letras o puntos, este campo sólo acepta valores numéricos. En caso de que usted ingrese algún valor que no sea numérico y dé clic al botón **"Identificarse"**, se encontrará con el siguiente aviso:
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/598ddbba-0dae-428a-bcfe-ab68e42230ce)
+![image](https://github.com/Santiagokmids/test/assets/72984873/abd27852-5da2-4b29-8de0-219ad7936799)
 > Aviso de valores mal diligenciados en el login
 
 En caso contrario, si usted ingresó valores numéricos y presiona el botón **"Identificarse"**, será enviado a la siguiente pantalla, la cual le informa que debe conectar una cámara para poder continuar.
+
+Como puede ver, en la esquina izquierda la pantalla, tendrá un botón. Este le permitirá dirigirse al **[Historial](#Historial)** de mediciones que se han realizado anteriormente con ese mismo dispositivo.
 
 #### Identificación de cámara
 
@@ -134,63 +137,63 @@ Si la aplicación no es capaz de identificar una cámara, seguirá buscando hast
 
 En ambas pantallas, tendrá la opción de ir de nuevo al login, esto a partir del botón **"<-"**. Por otro lado, en el momento en que se identifica una cámara, tendrá disponible la opción **"Siguiente"**, la cual al darle clic, le enviará a la pantalla para seleccionar el tipo de prueba que va a realizar.
 
-
-#### Selección del tipo de prueba
-
-Ahora podrá seleccionar el tipo de prueba que va a realizar, por lo que se le presenta la siguiente pantalla:
-
-![image](https://github.com/Santiagokmids/test/assets/72984873/fa7a32a2-0177-47b2-bc15-5991ab891d2c)
-> Pantalla donde se le presenta los dos tipos de medición que puede realizar para que seleccione uno
-
-En este apartado usted tendrá la opción de elegir **"Análisis de marcha"** o **"Timed Up and Go"**, dependiendo de la medición que desea realizar. Sólo puede elegir una opción, y en caso de no seleccionar ninguna y presionar el botón **"Siguiente"**, se encontrará con el siguiente aviso:
-
-![image](https://github.com/Santiagokmids/test/assets/72984873/e4173778-2aab-437d-9ac4-83ae528e262b)
-> Aviso que informa que debe seleccionar un tipo de prueba si desea continuar
-
-Si selecciona una opción y presiona el botón **"Siguiente"**, será enviado al siguiente apartado, el cual es el formulario del paciente.
-
 #### Formulario del paciente
 
 Ahora, se encontrará con una de las pantallas más importantes de la aplicación, que es la del formulario del paciente. Al iniciar, verá lo siguiente:
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/c446690a-0772-41d3-b6f1-bfdac651d2ad)
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/0ae62c8e-51c5-4737-9867-b10b144fd54a)
 > Inicio del formulario del paciente donde se ve el campo para ingresar su nombre
 
 Aquí podrá ingresar el nombre del paciente o persona a la que se le va a realizar la medición. El apartado de **Nombre** tiene un **"*"** debido a que el campo es obligatorio. Después de ingresar este campo, puede bajar con el scroll del mouse o directamente presionar la tecla **tab** del teclado para dirigirse al siguiente campo del formulario, el cual es **Apellidos**
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/c60a4a9a-b3b3-43c1-8a20-e2f0b377d97d)
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/84250488-b965-410c-a1ab-3f71aa5c85de)
 > Formulario del paciente donde se ve el campo para ingresar sus apellidos
 
 En esta parte del formulario, tendrá que ingresar el/los apellido(s) del paciente. Al igual que el campo de texto anterior, el campo de **Apellidos** es obligatorio.
 Después de diligenciar este campo de texto, puede bajar con el scroll del mouse o presionar la tecla **tab** del teclado para dirigirse al siguiente campo del formulario, el cual es **Cédula**
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/0d0728d0-6c17-4227-9a82-8e1f867bf7ad)
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/dd6b18cf-50f1-4cbe-ae66-5fcb3091d8bf)
 > Formulario del paciente donde se ve el campo para ingresar su cédula
 
 Aquí podrá ingresar la cédula o número de identificación del paciente. Al igual que los campos anteriormente diligenciados, este también es **obligarorio**. Después de ingresar este campo, puede bajar con el scroll del mouse o directamente presionar la tecla **tab** del teclado para dirigirse al siguiente campo del formulario, el cual es **Fecha de Nacimiento**, específicamente en el campo **día** o **DD**
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/e5eee491-d34d-4639-a544-e6369a7e4f70)
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/e911af6d-8f8d-482b-a09d-6d72c5d7b71b)
 > Formulario del paciente donde se ven los campos para ingresar la fecha de nacimiento. Está el día(DD), el mes(MM) y el año(AAAA)
 
 En este momento del formulario, podrá ingresar la fecha de nacimiento del paciente que va a ser medido. Aquí podrá ingresar el **día(DD)**, el **mes(MM)** y el **año(AAAA)**, cada valor en un campo diferente. 
 Es importante tener en cuenta que estos 3 campos sólo aceptan valores numéricos. Además, en esta parte, a medida que vaya ingresando valores, el cursor irá cambiando de campo automáticamente, esto significa que al ingresar dos valores en el campo de **día(DD)**, será directamente enviado al campo de **mes(MM)**, y aquí, al ingresar dos valores, será enviado al campo de **año(AAAA)**. En este último campo, al ingresar cuatro valores, será enviado inmediatamente al siguiente campo del formulario, el cual es **"Observaciones"**. Al igual que los campos anteriores, la Fecha de nacimiento es obligatoria.
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/a630b15e-25c7-4cfe-9f29-9e2e5b74ce60)
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/c5aec06e-dc32-4f4b-9817-c19dde1e6049)
 > Formulario del paciente donde se ve el campo de observaciones
 
 Este ya es el último apartado del formulario. Aquí tendrá que ingresar información que pueda ser relevante del paciente que va a ser medido. Este campo también es obligatorio y no tiene limitaciones de escritura. 
 
 Al final del formulario se encuentra el botón **"Guardar"**. Si presiona este botón sin haber llenado todos los campos del formulario, se encontrará con el siguiente aviso:
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/e1d47353-4a70-4427-a4ac-dd3eb9df1bbc)
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/c7ebf11d-02fe-4971-9164-675e01ea5539)
 > Aviso que informa que antes de guardar la información del paciente, debe llenar todos los campos obligatorios
 
 Asimismo, si al dar clic en **"Guardar"** ha llenado todos los campos del formulario pero presenta inconsistencias en la fecha, como por ejemplo que haya ingresado caracteres en lugar de números, que la fecha no tenga un formato válido o que el año de nacimiento del paciente sea menor a **1910**, se encontrará con el siguiente aviso:
 
-![image](https://github.com/Santiagokmids/test/assets/72984873/5f493133-3857-4657-9231-f8e87c18814b)
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/5274aafa-aa39-4883-956a-149b29da74db)
 > Aviso que informa que la fecha de nacimiento del paciente no es válida
 
 Si usted diligenció todos los campos y la fecha de nacimiento que ingresó es correcta, al dar clic en el botón **"Guardar"** será dirigido a la siguiente pantalla, la cual es:
+
+
+#### Selección del tipo de prueba
+
+Ahora podrá seleccionar el tipo de prueba que va a realizar, por lo que se le presenta la siguiente pantalla:
+
+![image](https://github.com/Santiagokmids/test/assets/72984873/333a4084-76a8-4f51-993c-abcce65c2f82)
+> Pantalla donde se le presenta los dos tipos de medición que puede realizar para que seleccione uno
+
+En este apartado usted tendrá la opción de elegir **"Análisis de marcha"** o **"Timed Up and Go"**, dependiendo de la medición que desea realizar. Sólo puede elegir una opción, y en caso de no seleccionar ninguna y presionar el botón **"Siguiente"**, se encontrará con el siguiente aviso:
+
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/2c44bfd2-9bbc-4e34-b9e3-64286764340e)
+> Aviso que informa que debe seleccionar un tipo de prueba si desea continuar
+
+Si selecciona una opción y presiona el botón **"Siguiente"**, será enviado al siguiente apartado, el cual es el apartado de grabación.
 
 #### Grabación
 
@@ -257,13 +260,21 @@ Aquí se puede dar clic a alguna de las tres opciones que se nos presentan. Si s
 
 En este apartado se logra ver la información del paciente que está siendo medido, como su nombre y número de cédula o de identificación
 
-Si se da clic en el botón **"Historial"** se mostrará el historial de pacientes que ha sido medido en el mismo dispositivo, esto de la siguiente forma:
-
-IMAGEN DEL HISTORIAL
+Si se da clic en el botón **["Historial"](#Historial)** se le enviará al historial de pacientes que ha sido medido en el mismo dispositivo.
 
 Si se da clic en el botón **"Info"** se le presentará al medidor la información sobre cómo tiene que preparar su espacio para la medición.
 
 IMAGEN DE ESO
+
+#### Historial
+
+En este apartado, usted podrá ver la información de las personas que han sido medidas en el dispositivo que está usando. Podrá ver su número de identificación o cédula, nombre, fecha en que se realizó la medición, ubicación del archivo donde se guardó la medición y por último, si este se ha subido o no al sistema VIMOV.
+Además, cuenta con dos opciones en la esquina superior derecha, donde podrá ir hacia una página anterior a la que ya está (en caso de que no se encuentr en la página 1) o ir una página más adelante si así lo desea.
+
+La pantalla del historial se verá de la forma:
+
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/9cf54b86-9e25-4593-9c24-4c5b13e1a64e)
+> Pantalla de historial
 
 #### Archivo guardado
 
