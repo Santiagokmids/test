@@ -216,12 +216,15 @@ Si da clic en este botón, se empezará a tomar datos de las articulaciones que 
 ![image](https://github.com/Santiagokmids/test/assets/72984873/b020ce58-4bfc-4118-97bb-7acb6843ef61)
 > Apartado de botones cuando se da clic al botón de iniciar grabación
 
+**Después de que empiece la grabación, no podrá ir de nuevo a la ventana anterior.** 
+
 Ahora aparecen 2 botones. El de la izquierda es el botón ⏹️, el cual me permite **parar** por completo la grabación y guardar los datos recolectados en un archivo en formato JSON. El otro botón es ⏸️, el cual me permite **pausar** la grabación.
 
 Si doy clic al botón de **pausa**, ahora el apartado se verá así:
 
 ![image](https://github.com/Santiagokmids/test/assets/72984873/65edd4dd-8fed-4340-903f-dadba952798c)
 > Apartado de botones cuando se le da clic al botón de pausar grabación
+
 
 Ahora puede ver que el botón de pausa ha cambiado por un nuevo botón. Este nuevo botón es ⏺️, cuya función es la misma que anteriormente se mencionó (Empezar grabación). El otro botón sigue teniendo la misma función (Parar grabación). 
 
