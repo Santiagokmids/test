@@ -268,9 +268,7 @@ En este apartado se logra ver la información del paciente que está siendo medi
 
 Si se da clic en el botón **["Historial"](#Historial)** se le enviará al historial de pacientes que ha sido medido en el mismo dispositivo.
 
-Si se da clic en el botón **"Info"** se le presentará al medidor la información sobre cómo tiene que preparar su espacio para la medición.
-
-IMAGEN DE ESO
+Si se da clic en el botón **"[Info](#Tutorial)"** se le presentará al medidor de nuevo la información sobre cómo tiene que preparar su espacio para la medición, todo el tutorial. Si este presiona el botón saltar o continua el flujo del tutorial, este al finaliza lo enviará de nuevo al apartado de [Grabación](#Grabación).
 
 #### Historial
 
