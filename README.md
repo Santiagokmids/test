@@ -28,8 +28,9 @@
    7. [Historial](#Historial)
    8. [Archivo guardado](#Archivo-guardado)
    9. [Archivo de logs](#Archivo-de-logs)
-8. [Resolución de dudas](#Resolución-de-dudas)
-9. [Actualizaciones](#Actualizaciones)
+8. [Cómo integrar una nueva cámara](#Cómo-integrar-una-nueva-cámara)
+9. [Resolución de dudas](#Resolución-de-dudas)
+10. [Actualizaciones](#Actualizaciones)
 
 ### Introducción
                 
@@ -74,7 +75,7 @@ Para poder sacar el máximo provecho al software, por favor instale:
 
 #### Resolución de Problemas Comunes
 - **No se puede ejecutar la aplicación**: Verifique que el antivirus de su sistema le permita ejecutar aplicaciones de externos.
-- **Aplicación no funciona con cámara Intel&reg; Realsense D435**: Verifique la cámara se encuentre conectada a un puerto **USB 3.1**.
+- **Aplicación no funciona con cámara Intel&reg; Realsense D435**: Verifique que la cámara se encuentre conectada a un puerto **USB 3.1.**
 
 ### Funcionamiento
 
@@ -302,10 +303,55 @@ Los archivos **logs** se verán así:
 
 Si presenta alguna duda o problema al momento de instalar o ejecutar la aplicación, no dude en ponerse en contacto con cualquiera de los autores de este software.
 
-### Actualizaciones
+### Cómo integrar una nueva cámara
 
-Este software puede presentar actualizaciones después de algunos meses, por lo que le recomendamos que esté atent@ de alguna nueva funcionalidad o resolución de bugs que se puedan dar.
+En caso de que se quiera integrar una nueva cámara al sistema, se tendrán que seguir los siguientes pasos:
 
+- Crear una clase adapter como la clase **IntelRealsenseCameraAdapter.cpp** ya presente en el aplicativo, cuyas funciones serán las de manejar e interactuar con la cámara. Esta clase deberá estar presente en el siguiente directorio:
+
+  ![image](https://github.com/Santiagokmids/test/assets/72984873/af757740-f051-4c91-9e21-fc7095076b72)
+  > Directorio que debe contener la clase Adapter de la cámara a integrar 
+
+- Otro aspecto clave para esta clase es que debe incluir los encabezados necesarios para poder adaptar el funcionamiento de la cámara con el del aplicativo. Estos encabezados son:
+
+  ![image](https://github.com/Santiagokmids/test/assets/72984873/4300139f-7560-40bd-a97d-b2cf21ff6eba)
+  > Encabezados que permitirán adaptar la cámara con el aplicativo
+
+- En esta clase tendrá que agregar cuatro métodos fundamentales, los cuales son **iniciar cámara**, **cerrar cámara**, **pasar cada articulación a un nombre estándar** y **procesar el siguiente frame**. Con estos métodos usted podrá realizar una integración correcta de una nueva cámara. Si desea apoyarse en un ejemplo, puede ver los métodos presentes en la clase **IntelRealsenseCameraAdapter.cpp**.
+
+  **Tenga en cuenta que dependiendo del SDK de cada cámara, puede tener que agregar más métodos a su clase. Sin embargo, los cuatro métodos anteriormente mencionados siempre deben estar, ya que estos son los que aseguran una correcta interacción con la cámara.**
+
+- Luego, otro aspecto que debe tener en cuenta son las dependencias. Si no agrega las dependencias necesarias para que la cámara funcione, será imposible integrarla. Cuando ya cuente con las dependencias de la cámara, agrege un directorio con el nombre de la cámara en la ruta:
+
+  ![1](https://github.com/Santiagokmids/test/assets/72984873/1f70be19-ff3c-4d09-9132-c317d25864e8)
+  > Ruta de donde se debe agregar un directorio con el nombre de la cámara para almacenar las dependencias
+  
+  Dentro del directorio creado, tendrá que ingresar archivos que permitirán usar la cámara. Si no tiene muy claro qué archivos debe ingresar, puede dirigirse al directorio **mhealth-emotion-intel\mhealth-emotion-intel\dependencies\realsense2**, donde podrá ver la estructura y los archivos necesarios para un correcto funcionamiento.
+
+- Después de tener la clase adapter implementada, tendrá que llamarla desde la clase **CaptureWorker.cpp**, la cual está presente en el siguiente directorio:
+
+  ![image](https://github.com/Santiagokmids/test/assets/72984873/254e6973-02cc-40b0-ac23-6d44ce9f441f)
+  > Directorio que contiene a la clase CaptureWorker.cpp
+  
+  En esta clase lo único que tendrá que hacer es agregar un condicional en el método **initializeCamera_worker**, esto para que cuando la cámara sea igual a la nueva, se llame a su constructor y se inicialice una nueva instancia de la misma. Un ejemplo de esta tarea lo puede ver claramente aquí:
+
+  ![image](https://github.com/Santiagokmids/test/assets/72984873/297e144e-8ce2-4769-827c-4a80d1740309)
+  > Condicional que inicializa la clase IntelRealsenseCameraAdapter siempre que la variable camera sea igual a INTEL_REALSENSE
+
+- Antes de realizar el llamado a captureWorker, se tiene que agregar el nombre de la cámara en el encabezado **Camera.h** que contiene el nombre de cada una de ellas. Este encabezado está aquí:
+
+  ![image](https://github.com/Santiagokmids/test/assets/72984873/8ed6c2e8-dbb2-418f-80b1-2f943a9e67e3)
+  > Encabezado que contiene los nombres de las cámaras que funcionan en el aplicativo.
+
+- Por último, tendrá que configurar el programa para que en la clase **cameramenu.cpp**, específicamente en el método **setup_capture_objects**, se identifique qué cámara se tiene conectada y dependiendo de esto, emita una señal a captureWorker con el nombre respectivo de la cámara, como se tiene aquí:
+
+  ![image](https://github.com/Santiagokmids/test/assets/72984873/0af59c57-93a1-46a4-a01b-eb137c438685)
+  > Línea de código donde se emite una señal al captureWorker con el nombre de la cámara Intel_Realsense
+
+
+### Resolución de dudas
+
+Si presenta alguna duda o problema al momento de instalar o ejecutar la aplicación, no dude en ponerse en contacto con cualquiera de los autores de este software.
 
 ### Muchas gracias por llegar hasta aquí
 
