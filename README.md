@@ -290,7 +290,7 @@ La pantalla del historial se verá de la forma:
 
 #### Archivo guardado
 
-Después de que se haya terminado de hacer la captura y de guardar el archivo, podrás ir a la ruta que te mostró la aplicación para encontrarlo. El nombre de este archivo se compone de la siguiente forma: **Nombre del Paciente - [Fecha de captura]_id de la captura.json**. 
+Después de que se haya terminado de hacer la captura y de guardar el archivo, podrás ir a la ruta que te mostró la aplicación para encontrarlo. Esta ruta apunta al directorio **Captures** que se encuentra en el apartado **Descargas** de tu sistema. El nombre de este archivo se compone de la siguiente forma: **Nombre del Paciente - [Fecha de captura]_id de la captura.json**. 
 
 En tu explorador de archivos se verá de la forma:
 
