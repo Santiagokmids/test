@@ -271,6 +271,13 @@ Si se da clic en el botón **["Historial"](#Historial)** se le enviará al histo
 
 Si se da clic en el botón **"[Info](#Tutorial)"** se le presentará al medidor de nuevo la información sobre cómo tiene que preparar su espacio para la medición, todo el tutorial. Si este presiona el botón saltar o continua el flujo del tutorial, este al finaliza lo enviará de nuevo al apartado de [Grabación](#Grabación).
 
+Por último, en caso de que usted no haya conectado bien la cámara o que la cámara que tiene conectada no tenga flujos RGB y no sea compatible con el sistema, le saldrá el siguiente error:
+
+![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/bcd6403b-cc58-41ab-a700-4c4889f3ab54)
+> Error que informa que no tiene una cámara compatible para realizar la grabación
+
+Asegúrese que tiene conectada bien la cámara en un puerto **USB 3.1** y luego, presione el botón **Atrás (<-)**. Así, podrá volver a dar click en **Siguiente** y el sistema de nuevo intentará abrir la cámara. Si el error persiste, verifique que la cámara es una Intel&reg; o que es la Orbbec Astra Pro.
+
 #### Historial
 
 En este apartado, usted podrá ver la información de las personas que han sido medidas en el dispositivo que está usando. Podrá ver su número de identificación o cédula, nombre, fecha en que se realizó la medición, ubicación del archivo donde se guardó la medición y por último, si este se ha subido o no al sistema VIMOV.
