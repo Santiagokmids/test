@@ -145,41 +145,41 @@ En ambas pantallas, tendrá la opción de ir de nuevo al login, esto a partir de
 
 Ahora, se encontrará con una de las pantallas más importantes de la aplicación, que es la del formulario del paciente. Al iniciar, verá lo siguiente:
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/0ae62c8e-51c5-4737-9867-b10b144fd54a)
+![image](https://github.com/Santiagokmids/test/assets/72984873/7e42394b-a4aa-40aa-99cb-34825456ebf9)
 > Inicio del formulario del paciente donde se ve el campo para ingresar su nombre
 
 Aquí podrá ingresar el nombre del paciente o persona a la que se le va a realizar la medición. El apartado de **Nombre** tiene un **"*"** debido a que el campo es obligatorio. Después de ingresar este campo, puede bajar con el scroll del mouse o directamente presionar la tecla **tab** del teclado para dirigirse al siguiente campo del formulario, el cual es **Apellidos**
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/84250488-b965-410c-a1ab-3f71aa5c85de)
+![image](https://github.com/Santiagokmids/test/assets/72984873/8ece407b-782b-4952-a1d5-dc809a2bbd25)
 > Formulario del paciente donde se ve el campo para ingresar sus apellidos
 
 En esta parte del formulario, tendrá que ingresar el/los apellido(s) del paciente. Al igual que el campo de texto anterior, el campo de **Apellidos** es obligatorio.
 Después de diligenciar este campo de texto, puede bajar con el scroll del mouse o presionar la tecla **tab** del teclado para dirigirse al siguiente campo del formulario, el cual es **Cédula**
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/dd6b18cf-50f1-4cbe-ae66-5fcb3091d8bf)
+![image](https://github.com/Santiagokmids/test/assets/72984873/2fed65f8-d568-406f-a4b9-5e095131c315)
 > Formulario del paciente donde se ve el campo para ingresar su cédula
 
 Aquí podrá ingresar la cédula o número de identificación del paciente. Al igual que los campos anteriormente diligenciados, este también es **obligarorio**. Después de ingresar este campo, puede bajar con el scroll del mouse o directamente presionar la tecla **tab** del teclado para dirigirse al siguiente campo del formulario, el cual es **Fecha de Nacimiento**, específicamente en el campo **día** o **DD**
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/e911af6d-8f8d-482b-a09d-6d72c5d7b71b)
+![image](https://github.com/Santiagokmids/test/assets/72984873/bf62bfbb-0901-4e06-af96-18c2162dfec0)
 > Formulario del paciente donde se ven los campos para ingresar la fecha de nacimiento. Está el día(DD), el mes(MM) y el año(AAAA)
 
 En este momento del formulario, podrá ingresar la fecha de nacimiento del paciente que va a ser medido. Aquí podrá ingresar el **día(DD)**, el **mes(MM)** y el **año(AAAA)**, cada valor en un campo diferente. 
 Es importante tener en cuenta que estos 3 campos sólo aceptan valores numéricos. Además, en esta parte, a medida que vaya ingresando valores, el cursor irá cambiando de campo automáticamente, esto significa que al ingresar dos valores en el campo de **día(DD)**, será directamente enviado al campo de **mes(MM)**, y aquí, al ingresar dos valores, será enviado al campo de **año(AAAA)**. En este último campo, al ingresar cuatro valores, será enviado inmediatamente al siguiente campo del formulario, el cual es **"Observaciones"**. Al igual que los campos anteriores, la Fecha de nacimiento es obligatoria.
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/c5aec06e-dc32-4f4b-9817-c19dde1e6049)
+![image](https://github.com/Santiagokmids/test/assets/72984873/aff6347f-1fb3-47bf-890c-a88f6b40b8ec)
 > Formulario del paciente donde se ve el campo de observaciones
 
 Este ya es el último apartado del formulario. Aquí tendrá que ingresar información que pueda ser relevante del paciente que va a ser medido. Este campo también es obligatorio y no tiene limitaciones de escritura. 
 
 Al final del formulario se encuentra el botón **"Guardar"**. Si presiona este botón sin haber llenado todos los campos del formulario, se encontrará con el siguiente aviso:
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/c7ebf11d-02fe-4971-9164-675e01ea5539)
+![image](https://github.com/Santiagokmids/test/assets/72984873/1cb1d5c7-1c70-40e1-acbd-4b34bb0b58c5)
 > Aviso que informa que antes de guardar la información del paciente, debe llenar todos los campos obligatorios
 
 Asimismo, si al dar clic en **"Guardar"** ha llenado todos los campos del formulario pero presenta inconsistencias en la fecha, como por ejemplo que haya ingresado caracteres en lugar de números, que la fecha no tenga un formato válido o que el año de nacimiento del paciente sea menor a **1910**, se encontrará con el siguiente aviso:
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/5274aafa-aa39-4883-956a-149b29da74db)
+![image](https://github.com/Santiagokmids/test/assets/72984873/7bea4bb8-9e7b-4cfb-bef8-9acf1a46fbf7)
 > Aviso que informa que la fecha de nacimiento del paciente no es válida
 
 Si usted diligenció todos los campos y la fecha de nacimiento que ingresó es correcta, al dar clic en el botón **"Guardar"** será dirigido a la siguiente pantalla, la cual es:
