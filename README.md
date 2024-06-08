@@ -194,7 +194,7 @@ Ahora podrá seleccionar el tipo de prueba que va a realizar, por lo que se le p
 
 En este apartado usted tendrá la opción de elegir **"Análisis de marcha"** o **"Timed Up and Go"**, dependiendo de la medición que desea realizar. Sólo puede elegir una opción, y en caso de no seleccionar ninguna y presionar el botón **"Siguiente"**, se encontrará con el siguiente aviso:
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/2c44bfd2-9bbc-4e34-b9e3-64286764340e)
+![image](https://github.com/Santiagokmids/test/assets/72984873/6e77fb7f-6193-41a8-b216-462988af4a4c)
 > Aviso que informa que debe seleccionar un tipo de prueba si desea continuar
 
 Si selecciona una opción y presiona el botón **"Siguiente"**, será enviado al siguiente apartado, el cual es el apartado de grabación.
