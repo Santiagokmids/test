@@ -285,7 +285,7 @@ Además, cuenta con dos opciones en la esquina superior derecha, donde podrá ir
 
 La pantalla del historial se verá de la forma:
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/9cf54b86-9e25-4593-9c24-4c5b13e1a64e)
+![image](https://github.com/Santiagokmids/test/assets/72984873/35afc403-c605-44d2-bcab-b184e3a921de)
 > Pantalla de historial
 
 #### Archivo guardado
