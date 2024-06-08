@@ -273,7 +273,7 @@ Si se da clic en el botón **"[Info](#Tutorial)"** se le presentará al medidor 
 
 Por último, en caso de que usted no haya conectado bien la cámara o que la cámara que tiene conectada no tenga flujos RGB y no sea compatible con el sistema, le saldrá el siguiente error:
 
-![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/bcd6403b-cc58-41ab-a700-4c4889f3ab54)
+![image](https://github.com/Santiagokmids/test/assets/72984873/d6e1095c-c09f-47a0-b5f2-2425903e4db4)
 > Error que informa que no tiene una cámara compatible para realizar la grabación
 
 Asegúrese que tiene conectada bien la cámara en un puerto **USB 3.1** y luego, presione el botón **Atrás (<-)**. Así, podrá volver a dar click en **Siguiente** y el sistema de nuevo intentará abrir la cámara. Si el error persiste, verifique que la cámara es una Intel&reg; o que es la Orbbec Astra Pro.
