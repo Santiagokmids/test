@@ -3,7 +3,7 @@
 ## Te Motion Intel
 **Versión:** 1.0
 
-**Fecha:** 27 de mayo del 2024
+**Fecha última actualización:** 17 de junio del 2024
 
 **Autores**: [Juan Fernando Martínez](https://github.com/JuanF2019), [Diana Olano](https://github.com/DianaSofiaOlano), [Juan José Osorio](https://github.com/juanosorio0219), [Luis Miguel Ossa](https://github.com/Itsumohitoride) y [Santiago Trochez](https://github.com/Santiagokmids).
 
@@ -28,9 +28,10 @@
    7. [Historial](#Historial)
    8. [Archivo guardado](#Archivo-guardado)
    9. [Archivo de logs](#Archivo-de-logs)
-8. [Cómo integrar una nueva cámara](#Cómo-integrar-una-nueva-cámara)
-9. [Resolución de dudas](#Resolución-de-dudas)
-10. [Actualizaciones](#Actualizaciones)
+10. [Sobre la implementación actual de los adapters](#Sobre-la-implementación-actual-de-los-adapters)
+11. [Cámaras compatibles](#Cámaras-compatibles)
+12. [Resolución de dudas](#Resolución-de-dudas)
+13. [Actualizaciones](#Actualizaciones)
 
 ### Introducción
                 
@@ -58,24 +59,110 @@ Esperamos que encuentre este manual útil y que le ayude a aprovechar al máximo
 
 ### Instalación
 
+### Instalación
+
 #### Descarga de la Aplicación
-Para descargar **Te-motion Intel**, diríjase a releases y descargue la versión más reciente de la aplicación.
+Para descargar **Te-motion Intel**, diríjase a **[releases](https://github.com/i2tResearch/mhealth-emotion-intel/releases)** y descargue la versión más reciente de la aplicación, ya sea para su versión de **Windows** o **Linux**.
 
-#### Instalación de componentes externos
-Para poder sacar el máximo provecho al software, por favor instale:
-- [Python 11](https://www.python.org/downloads/release/python-3119/)
+#### Instalación de componentes externos para Windows
+- **Orbbec camara driver** Si va a hacer uso de la cámara Orbbec Astra Pro se requiere la instalación del driver para la cámara.
+   - Puede descargarlo de la página oficial de Orbbec: [Orbbec Camara Driver](https://www.orbbec.com/developers/astra-sdk/) dando click click donde dice: **Orbbec Camera Driver for Windows** 
+   - Para instalar de doble click sobre el archivo descargado y siga las instrucciones en pantalla.
+- **Microsoft Visual C++ Redistributable**:
+   - Pueden ser descargadas desde la página oficial de [Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) o desde el link directo para arquitectura x64 dando click [aquí](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+   - Para instalar de doble click sobre el archivo descargado y siga las instrucciones en pantalla.
+- **Python:** Para poder sacar el máximo provecho al software, por favor instale:
+   - [Python 3.11](https://www.python.org/downloads/release/python-3119/)
 
-  Si no sabe cómo instalar **python**, puede ver el siguiente [tutorial](https://elpythonista.com/como-instalar-python#:~:text=con%20c%C3%B3digo%20Java.-,%C2%BFC%C3%B3mo%20instalar%20el%20int%C3%A9rprete%20de%20Python%3F,-El%20int%C3%A9rprete%20de)
+      Si no sabe cómo instalar **python**, puede ver el siguiente [tutorial](https://elpythonista.com/como-instalar-python#:~:text=con%20c%C3%B3digo%20Java.-,%C2%BFC%C3%B3mo%20instalar%20el%20int%C3%A9rprete%20de%20Python%3F,-El%20int%C3%A9rprete%20de)
+
+      Si ya tiene **python** instalado pero no sabe qué versión tiene:
+      - Abra la consola de su dispositivo
+      - Digite en la consola:
+        ```
+        python --version
+        ```
+        Y así de fácil podrá ver la versión que tiene instalada.
+
+      Para la ejecución del script de envío de datos a vimov debe instalar el paquete `requests` ejecutando el siguiente comando en su consola:
+
+        ```
+        pip install requests
+        ```
 
 #### Proceso de Instalación
 1. **Windows**:
-   - Ejecute el archivo .exe descargado y listo, podrá usar con éxito la aplicación.
-     
-  ![image](https://github.com/Santiagokmids/test/assets/72984873/adc368eb-e304-4dfb-ac2f-3bc830655588)
 
-#### Resolución de Problemas Comunes
+   1. Para descargar e inicar la aplicación:
+
+      - En el Release más reciente, dé clic en la siguiente opción para descargar la aplicación:
+
+        ![1](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/6686cdd8-c48d-42e4-8afb-5f7aec33784b)
+        > Opción que permite descargar la aplicación completa.
+   
+      - Una vez que descargue los archivos, tendrá a su disposición una carpeta **.zip** que tendrá que descomprimir o extraer en su directorio de **Descargas**. Después de extraerla, tendrá un directorio de la siguiente forma:
+
+        ![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/bdc4f6ac-183a-4852-a56c-684d9377191e)
+        > Contenido del directorio luego de haberlo descomprimido.
+   
+      - Ahora diríjase a la siguiente dirección para encontrar el ejecutable o .exe de la aplicación:
+
+        ![2](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/c33c76e9-de74-4016-a455-701b9f74972a)
+        > Contenido del directorio que contiene el archivo .exe de la aplicación.
+        
+      - Por último, podrá dar clic al archivo .exe y la aplicación se ejecutará con exito.
+
+      - **IMPORTANTE**: si desea que la aplicación se ejecute siempre que se inicie sesión en su dispositivo, puede ver el siguiente [tutorial](https://www.xataka.com/basics/como-hacer-que-programa-se-ejecute-al-iniciar-windows-11-forma-automatica) para configurarlo de manera correcta.
+
+   2. Para programar la tarea que envía datos al sistema VIMOV:
+
+      - Lo primero que debe hacer es buscar en su buscador de Windows **Programador de tareas** o **Task scheduler**, dependiendo del idioma en el que esté su sitema operativo. La aplicación debe verse así:
+
+        ![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/15954475-eef0-4272-a811-0c73dd3d2dbd)
+        > Logo de la aplicación para programar una tarea.
+      - Luego, cuando abra la aplicación, dará clic en la siguiente opción:
+
+        ![3](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/6f883157-9ea6-4a74-860f-29bf328d42ff)
+        > Opción para crear una tarea.
+      - Cuando presione clic aquí, se encontrará con una sección en donde escribirá detalles generales de la tarea, como su nombre y descripción.
+
+        ![4](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/45816a2b-4b85-4dc3-aab0-793ba0f79319)
+        > Sección para ingresar detalles generales de la tarea a crear.
+      - Después de ingresar los datos necesarios, podrá irse al apartado de desencadenadores. Aquí, se configura la frecuencia a ejecutar de la tarea a programar. Para agregar la frecuencia, dé clic en la opción **Nuevo**. Luego de hacer esto, se encontrará con el siguiente apartado:
+
+        ![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/7daae864-a2e8-40b7-a55a-49c6f47060e4)
+        > Apartado para configurar las veces que se va a ejecutar la tarea.
+      Cuando configure este apartado, presione **aceptar**.
+
+      - Ahora, podrá ir al apartado de acciones. Aquí, como en el apartado anterior, deberá presionar el botón **Nuevo**. Luego de esto, se encontrará con un apartado en donde podrá elegir la acción a realizar y el script o ejecutable que se ejecutará.
+
+        ![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/33a9ea0a-c298-4164-95b8-c062b23e23bc)
+        > Apartado para agregar una acción.
+         **IMPORTANTE**: el script que debe accionar se encuentra aquí:
+
+         ![5](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/46280b8f-b760-407c-b7a2-a63680a19754)
+         > Script que se debe programar para ejecutar la tarea.
+   
+         Además, tendrá que ingresar al script y cambiar los siguientes campos por las direcciones que corresponden en su dispositivo:
+
+         ![6](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/3c262e82-8239-4dcd-b4fb-d6ee6ea7cbd8)
+         > Campos que debe editar para que correspondan a las direcciones de su dipositivo.
+  
+         Después de asegurarse que todo esté correcto, puede presionar el botón **aceptar**.
+
+      - Ahora, podrá ir directamente al apartado de configuración y ahí, es recomendable que deje este apartado con la siguiente configuración:
+
+        ![image](https://github.com/i2tResearch/mhealth-emotion-intel/assets/72984873/1951ec02-2654-47ae-8e3d-bf952a6cff10)
+        > Apartado de configuración de la tarea a programar.
+   Después de esto, podrá ejecutar la aplicación sin problema alguno, asegurándose que todo va a funcionar correctamente, desde el inicio de la misma hasta el envío de datos al sistema VIMOV.
+
+
+2. **Linux**:
+   1. Actualmente en desarrollo
+
+#### Resolución de Problemas Comunes en Windows
 - **No se puede ejecutar la aplicación**: Verifique que el antivirus de su sistema le permita ejecutar aplicaciones de externos.
-- **Aplicación no funciona con cámara Intel&reg; Realsense D435**: Verifique que la cámara se encuentre conectada a un puerto **USB 3.1.**
+- **Aplicación no funciona con cámara Intel&reg; Realsense D435 o D455**: Verifique que la cámara se encuentre conectada a un puerto **USB 3.1.**
 
 ### Funcionamiento
 
@@ -354,6 +441,44 @@ En caso de que se quiera integrar una nueva cámara al sistema, se tendrán que 
 
   ![image](https://github.com/Santiagokmids/test/assets/72984873/0af59c57-93a1-46a4-a01b-eb137c438685)
   > Línea de código donde se emite una señal al captureWorker con el nombre de la cámara Intel_Realsense
+
+### Sobre la implementación actual de los adapters
+
+Como se mencionó anteriormente en caso que el SDK no soporte todas las articulaciones se deberá manejarlas manualmente dentro de las implementaciones, a continuación se describe como se manejaron para los adapters de las cámaras Intel Realsense:
+
+- `IntelRealsenseCameraAdapter` con el modelo Movenet:   
+   - `StandardJointType::SPINE_BASE`: Promedio entre LEFT_HIP y RIGHT_HIP.
+   - `StandardJointType::BODY_CENTER`: Igual a SPINE_BASE.
+   - `StandardJointType::SHOULDER_SPINE`: Promedio de LEFT_SHOULDER Y RIGHT_SHOULDER.
+   - `StandardJointType::HEAD`: Promedio de LEFT_EAR y RIGHT_EAR.
+   - `StandardJointType::NECK`: Promedio de SHOULDER_SPINE y HEAD.
+   - `StandardJointType::MID_SPINE`: Promedio de SHOULDER_SPINE y SPINE_BASE.
+   - `StandardJointType::LEFT_HAND`: confidence=-1.0, x=0.0, y=0.0, z=0.0, tracking_state: NOT_TRACKED.
+   - `StandardJointType::RIGHT_HAND`: confidence=-1.0, x=0.0, y=0.0, z=0.0, tracking_state: NOT_TRACKED.
+- `IntelRealsenseLIPSCameraAdapter` con el modelo LIPS (En la rama experimental_lips):
+   - `StandardJointType::SPINE_BASE`: Promedio entre LEFT_HIP y RIGHT_HIP.
+   - `StandardJointType::BODY_CENTER`: Igual a SPINE_BASE.
+   - `StandardJointType::SHOULDER_SPINE`: Equivalente a `lips::LIPSBODYPOSE_KEYPOINT_ENUM::LIPSBODYPOSE_NECK`.
+   - `StandardJointType::HEAD`: Promedio de LEFT_EAR y RIGHT_EAR.
+   - `StandardJointType::NECK`: Promedio de SHOULDER_SPINE y HEAD.
+   - `StandardJointType::MID_SPINE`: Promedio de SHOULDER_SPINE y SPINE_BASE.
+   - `StandardJointType::LEFT_HAND`: confidence=-1.0, x=0.0, y=0.0, z=0.0, tracking_state: NOT_TRACKED.
+   - `StandardJointType::RIGHT_HAND`: confidence=-1.0, x=0.0, y=0.0, z=0.0, tracking_state: NOT_TRACKED.
+
+### Cámaras compatibles
+
+Las cámaras que funcionan en este software son las siguientes:
+
+- Cámara **[Intel&reg; Realsense D455](https://www.intelrealsense.com/depth-camera-d455/)**.
+- Cámara **[Intel&reg; Realsense D435](https://www.intelrealsense.com/depth-camera-d435/)**.
+- Cámara **[Orbbec Astra Pro](https://shop.orbbec3d.com/Astra-Pro-Plus)**.
+
+Además, también es posible que sea compatible con las cámaras que cumplen con al menos uno de estos requisitos:
+
+- Cámaras compatibles con el SDK **[Intel Realsense 2.0](https://www.intelrealsense.com/sdk-2/)** que cuenten con un sensor de profundidad y RGB y soporten una resolución de profundidad de 848x640@30fps.
+- Cámaras compatibles con el SDK **[Orbbec Astra SDK](https://www.orbbec.com/developers/astra-sdk/)** que soporten un flujo de tipo body `(astra::BodyStream)`.
+
+Si desea agregar una cámara a la aplicación que no cumpla con estos requisitos, por favor revise [Cómo integrar una nueva cámara](#Cómo-integrar-una-nueva-cámara).
 
 
 ### Resolución de dudas
